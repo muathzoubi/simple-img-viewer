@@ -1,0 +1,87 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+body {
+  background-color: rgba(0, 0, 0, 0.9099) !important;
+  color: white;
+}
+.App {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  height: 7px;
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#thumbnails img,
+#main {
+  box-shadow: 0 0px 1px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+* {
+  transition: all 0.5s ease;
+}
+#thumbnails {
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: #fefefe #212121;
+  scrollbar-width: thin;
+}
+#thumbnails img {
+  width: 90px;
+  height: 90px;
+  filter: brightness(80%);
+  margin: 10px;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  #thumbnails img {
+    width: 50px;
+    height: 50px;
+  }
+}
+#thumbnails img:hover {
+  transform: scale(1.15);
+  filter: brightness(130%);
+}
+#main {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.showcase {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
